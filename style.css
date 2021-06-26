@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Navbar */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: #030303;
+    transition: top 500ms ease-in-out;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky div {
+    padding-top: 10px;
+  }
+
+ nav.scroll-up, nav:focus-within{
+     top: 0;
+ }
+
+ nav.scroll-down{
+     top: -100%;
+ }
+
+ .links {
+     display: flex;
+     margin: 0 -1rem;
+ }
+
+ .links a {
+     display: inline-block;
+     margin: 0 1rem;
+     color:#e2e2e2
+ }
+
+ .links a:hover {
+    color: antiquewhite;
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #e2e2e2;
+}
+
+nav a {
+    color:#e2e2e2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+
+
+/* Hero */
+
+.hero {
+    background: url('images/cover.jpg') center;
+    background-size: cover;
+    padding: 16rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+
+.hero * {
+    color: white;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+/* Who section */
+
+.who {
+    text-align: center;
+    width: 100%;
+}
+
+.who h1 {
+    font-size: 2rem;
+}
+
+
+
+/* Catálogo */
+
+.catalog .container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.catalog h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.catalog .extra{
+    text-align: center;
+}
+
+.catalog img {
+    max-width: 100%;
+    height: 300px;
+}
+
+.catalog .container p {
+    font-size: 20px;
+    padding: 1rem;
+    line-height: 30px;
+}
+
+.catalog .container-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+.catalog .container-2 p {
+    font-size: 20px;
+    padding: 1rem;
+    line-height: 30px;
+    color: #e2e2e2;
+    text-align: right;
+}
+
+/*Contacto*/
+
+.contacto {
+    text-align: center;
+}
+
+.contacto h1 {
+    font-size: 2rem;
+}
+
+.contacto .info {
+    display: inline-block;
+    padding: 20px;
+}
+
+.contacto .info a {
+    text-decoration: none;
+    color: black;
+}
+
+.contacto .info a:hover {
+    color: rgb(187, 170, 147);
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    padding: .75rem;
+    color: white;
+    text-align: center;
+    font-size: .75rem;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .catalog .container {
+        flex-direction: column;
+    }
+
+    .catalog img {
+        height: 200px;
+    }
+
+    .catalog .container p {
+        font-size: 18px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .catalog .container-2 {
+        flex-direction: column;
+    }
+
+    .catalog .container-2 p {
+        font-size: 18px;
+        overflow: hidden;
+        text-align: center;
+    }
+}
